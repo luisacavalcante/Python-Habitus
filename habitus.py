@@ -7,15 +7,28 @@ import pandas as pd
 Lendo um arquivo .csv com pandas e criando um pandas data frame
 """
 import pandas as pd
-data = pd.read_csv("prediction.csv")
+data = pd.read_csv("data.txt")
 print(data)
 #até aqui ok
 plt.figure(figsize=(8, 6))
-plt.plot(data['Date'], data['Open'])
-plt.xlabel('Date')
-plt.ylabel('Open')
-plt.title('Petr4_teste')
-plt.savefig('annual-real-gnp-us-1909-to-1970.png')
+plt.plot(data['horario'], data['x'])
+plt.xlabel('horario')
+plt.ylabel('x')
+plt.title('Habitus eixo X')
+plt.savefig('Habitus-eixo-x.png')
 
+plt.figure(figsize=(8, 6))
+plt.plot(data['horario'], data['y'])
+plt.xlabel('horario')
+plt.ylabel('y')
+plt.title('Habitus eixo y')
+plt.savefig('Habitus-eixo-y.png')
+
+plt.figure(figsize=(8, 6))
+plt.plot(data['horario'], data['z'])
+plt.xlabel('horario')
+plt.ylabel('z')
+plt.title('Habitus eixo Z')
+plt.savefig('Habitus-eixo-z.png')
 
 plt.close()
